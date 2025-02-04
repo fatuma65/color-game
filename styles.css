@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.color-box {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.instructions {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color-options button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-options button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.color-options button.correct {
+  box-shadow: 0 0 15px #4CAF50;
+}
+
+.color-options button.wrong {
+  box-shadow: 0 0 15px #f44336;
+}
+
+.status {
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.status.correct {
+  color: #4CAF50;
+  animation: celebration 0.5s ease;
+}
+
+.status.wrong {
+  color: #f44336;
+  animation: shake 0.5s ease;
+}
+
+.color-box.correct {
+  animation: celebration 0.5s ease;
+}
+
+.color-box.wrong {
+  animation: shake 0.5s ease;
+}
+
+.score {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.new-game-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.new-game-button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes celebration {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .color-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
