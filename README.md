@@ -37,7 +37,12 @@ A fun and interactive color guessing game built with HTML, CSS, and JavaScript. 
 ## Getting Started
 
 1. Clone or download this repository
-2. Open `index.html` in your web browser
+
+```bash 
+git clone https://github.com/fatuma65/color-game.git
+```
+2. Open `index.html` in your web browser or with live server
+
 3. Start playing!
 
 ## Technologies Used
